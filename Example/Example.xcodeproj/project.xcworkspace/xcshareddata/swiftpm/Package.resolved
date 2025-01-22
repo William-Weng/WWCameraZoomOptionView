@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWCameraZoomOptionView",
       "state" : {
-        "revision" : "37dbf99ac9fb6a3b8073a6a400d7f20d9899e6b5",
-        "version" : "1.0.1"
+        "revision" : "ced9323a461b0b63d12448152d0125aacf0350a3",
+        "version" : "1.0.2"
       }
     }
   ],

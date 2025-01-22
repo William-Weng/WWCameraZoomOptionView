@@ -447,7 +447,7 @@
 			repositoryURL = "https://github.com/William-Weng/WWCameraZoomOptionView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
