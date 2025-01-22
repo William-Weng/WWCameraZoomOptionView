@@ -38,6 +38,10 @@ extension ViewController: WWCameraZoomOptionViewDelegate {
         return textArray[index]
     }
     
+    func duration(with optionView: WWCameraZoomOptionView, index: Int) -> TimeInterval {
+        return 0.25
+    }
+    
     func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, didSelected index: Int) {
         print(index)
     }

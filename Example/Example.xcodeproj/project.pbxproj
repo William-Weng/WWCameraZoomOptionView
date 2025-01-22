@@ -15,7 +15,8 @@
 		817568142CA2C33600B24577 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817568122CA2C33600B24577 /* Constant.swift */; };
 		817568152CA2C33600B24577 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817568132CA2C33600B24577 /* Extension.swift */; };
 		818F56052D40F1EA00DBB9B8 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 818F56042D40F1EA00DBB9B8 /* WWCameraZoomOptionView */; };
-		81CAF7002D40F8FD008799BD /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81CAF6FF2D40F8FD008799BD /* WWCameraZoomOptionView */; };
+		81CAF7032D40FB2E008799BD /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81CAF7022D40FB2E008799BD /* WWCameraZoomOptionView */; };
+		81CAF7062D40FF34008799BD /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81CAF7052D40FF34008799BD /* WWCameraZoomOptionView */; };
 		81D01BD72D40F1B900478106 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81D01BD62D40F1B900478106 /* WWCameraZoomOptionView */; };
 		81E3F24A2D40A362003516F5 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81E3F2492D40A362003516F5 /* WWCameraZoomOptionView */; };
 /* End PBXBuildFile section */
@@ -39,8 +40,9 @@
 			files = (
 				81D01BD72D40F1B900478106 /* WWCameraZoomOptionView in Frameworks */,
 				818F56052D40F1EA00DBB9B8 /* WWCameraZoomOptionView in Frameworks */,
-				81CAF7002D40F8FD008799BD /* WWCameraZoomOptionView in Frameworks */,
+				81CAF7032D40FB2E008799BD /* WWCameraZoomOptionView in Frameworks */,
 				81E3F24A2D40A362003516F5 /* WWCameraZoomOptionView in Frameworks */,
+				81CAF7062D40FF34008799BD /* WWCameraZoomOptionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +140,8 @@
 				81E3F2492D40A362003516F5 /* WWCameraZoomOptionView */,
 				81D01BD62D40F1B900478106 /* WWCameraZoomOptionView */,
 				818F56042D40F1EA00DBB9B8 /* WWCameraZoomOptionView */,
-				81CAF6FF2D40F8FD008799BD /* WWCameraZoomOptionView */,
+				81CAF7022D40FB2E008799BD /* WWCameraZoomOptionView */,
+				81CAF7052D40FF34008799BD /* WWCameraZoomOptionView */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -169,7 +172,7 @@
 			);
 			mainGroup = 817567EF2CA2C2B400B24577;
 			packageReferences = (
-				81CAF6FE2D40F8FD008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */,
+				81CAF7042D40FF34008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -436,11 +439,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81CAF6FE2D40F8FD008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */ = {
+		81CAF7042D40FF34008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWCameraZoomOptionView";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
 			};
 		};
@@ -451,9 +454,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWCameraZoomOptionView;
 		};
-		81CAF6FF2D40F8FD008799BD /* WWCameraZoomOptionView */ = {
+		81CAF7022D40FB2E008799BD /* WWCameraZoomOptionView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81CAF6FE2D40F8FD008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */;
+			productName = WWCameraZoomOptionView;
+		};
+		81CAF7052D40FF34008799BD /* WWCameraZoomOptionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81CAF7042D40FF34008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */;
 			productName = WWCameraZoomOptionView;
 		};
 		81D01BD62D40F1B900478106 /* WWCameraZoomOptionView */ = {

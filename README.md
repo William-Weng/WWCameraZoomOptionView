@@ -19,13 +19,14 @@ dependencies: [
 |函式|功能|
 |-|-|
 |configure(with:optionViewInformation:)|相關設定|
-|selectItem(with:scale:duration:)|選擇選項|
+|selectItem(with:scale:)|選擇選項|
 
 ### [WWCameraZoomOptionViewDelegate](https://ezgif.com/video-to-webp)
 |函式|功能|
 |-|-|
 |itemCount(with:)|項目數量|
 |labelText(with:index:)|項目文字|
+|duration(with:index:)|動畫時間|
 |cameraZoomOptionView(_:didSelected:)|項目被選到哪一個|
 
 ### Example
@@ -59,6 +60,10 @@ extension ViewController: WWCameraZoomOptionViewDelegate {
     
     func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String {
         return textArray[index]
+    }
+    
+    func duration(with optionView: WWCameraZoomOptionView, index: Int) -> TimeInterval {
+        return 0.25
     }
     
     func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, didSelected index: Int) {

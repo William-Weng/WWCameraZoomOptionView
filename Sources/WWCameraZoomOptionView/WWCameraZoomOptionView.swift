@@ -11,6 +11,7 @@ import UIKit
 open class WWCameraZoomOptionView: UIView {
             
     private let optionStackView = UIStackView()
+    private let defaultDuration: TimeInterval = 0.25
     
     private weak var delegate: WWCameraZoomOptionViewDelegate?
     
@@ -18,6 +19,18 @@ open class WWCameraZoomOptionView: UIView {
     
     deinit {
         delegate = nil
+    }
+}
+
+// MARK: - @objc
+@objc extension WWCameraZoomOptionView {
+    
+    /// 選項被點到的處理
+    /// - Parameter tap: UITapGestureRecognizer
+    func haneleTapAction(_ tap: UITapGestureRecognizer) {
+        
+        guard let optionView = tap.view as? CameraZoomOptionView else { return }
+        selectItem(with: optionView.tag)
     }
 }
 
@@ -42,8 +55,7 @@ public extension WWCameraZoomOptionView {
     /// - Parameters:
     ///   - index: 序號
     ///   - scale: 縮放比例
-    ///   - duration: 動畫時間
-    func selectItem(with index: Int, scale: CGFloat = 1.2, duration: TimeInterval = 0.25) {
+    func selectItem(with index: Int, scale: CGFloat = 1.2) {
         
         let count = optionStackView.subviews.count
         
@@ -52,7 +64,7 @@ public extension WWCameraZoomOptionView {
             guard let subView = subView as? CameraZoomOptionView else { return }
             
             let _scale = (subView.tag != index) ? 1.0 : scale
-            subView.updateGapTransform(with: _scale, duration: duration)
+            subView.updateGapTransform(with: _scale, duration: durationMaker(with: index))
         }
         
         if count != 0, count > index {
@@ -77,8 +89,10 @@ private extension WWCameraZoomOptionView {
             
             let optionView = CameraZoomOptionView()
             let text = delegate?.labelText(with: self, index: Int(index))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(haneleTapAction))
             
             optionView.setting(with: index, text: text, optionViewInformation: optionViewInformation)
+            optionView.addGestureRecognizer(tap)
             optionStackView.addArrangedSubview(optionView)
         }
         
@@ -86,5 +100,13 @@ private extension WWCameraZoomOptionView {
         optionStackView.distribution = .fillEqually
         
         optionStackView._autolayout(on: self)
+    }
+    
+    /// 取得動畫時間
+    /// - Parameters:
+    ///   - index: 序號
+    /// - Returns: TimeInterval
+    func durationMaker(with index: Int) -> TimeInterval {
+        return delegate?.duration(with: self, index: index) ?? defaultDuration
     }
 }
