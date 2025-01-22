@@ -11,7 +11,7 @@
 
 ```bash
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.0.2"))
 ]
 ```
 
@@ -28,6 +28,11 @@ dependencies: [
 |labelText(with:index:)|項目文字|
 |duration(with:index:)|動畫時間|
 |cameraZoomOptionView(_:didSelected:)|項目被選到哪一個|
+
+### Parameters - 參數
+|參數|功能|
+|-|-|
+|currentSelectedIndex|當前被選到的Index|
 
 ### Example
 ```swift

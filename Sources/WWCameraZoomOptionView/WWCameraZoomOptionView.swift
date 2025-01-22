@@ -9,10 +9,12 @@ import UIKit
 
 // MARK: - 縮放圓點的顯示外型
 open class WWCameraZoomOptionView: UIView {
-            
+    
+    public var currentSelectedIndex: Int?
+    
     private let optionStackView = UIStackView()
     private let defaultDuration: TimeInterval = 0.25
-    
+        
     private weak var delegate: WWCameraZoomOptionViewDelegate?
     
     private var optionViewInformation: OptionViewInformation = (font: UIFont.systemFont(ofSize: 12), textColor: .white, backgroundColor: .darkGray.withAlphaComponent(0.5))
@@ -46,9 +48,14 @@ public extension WWCameraZoomOptionView {
         if let optionViewInformation = optionViewInformation { self.optionViewInformation = optionViewInformation }
         
         let count = delegate?.itemCount(with: self) ?? 0
+        
         self.delegate = delegate
+        self.currentSelectedIndex = nil
         
         createStackView(with: UInt(count), optionViewInformation: self.optionViewInformation)
+        
+        setNeedsLayout()
+        layoutIfNeeded()
     }
     
     /// 選擇選項
@@ -67,7 +74,10 @@ public extension WWCameraZoomOptionView {
             subView.updateGapTransform(with: _scale, duration: durationMaker(with: index))
         }
         
+        currentSelectedIndex = nil
+        
         if count != 0, count > index {
+            currentSelectedIndex = index
             delegate?.cameraZoomOptionView(self, didSelected: index)
         }
     }
@@ -98,7 +108,6 @@ private extension WWCameraZoomOptionView {
         
         optionStackView.axis = .horizontal
         optionStackView.distribution = .fillEqually
-        
         optionStackView._autolayout(on: self)
     }
     

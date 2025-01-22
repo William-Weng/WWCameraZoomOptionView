@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64E97DE72D41283A004A97A4 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 64E97DE62D41283A004A97A4 /* WWCameraZoomOptionView */; };
+		64E97DEA2D412C66004A97A4 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 64E97DE92D412C66004A97A4 /* WWCameraZoomOptionView */; };
 		817567FC2CA2C2B400B24577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817567FB2CA2C2B400B24577 /* AppDelegate.swift */; };
 		817568002CA2C2B400B24577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817567FF2CA2C2B400B24577 /* ViewController.swift */; };
 		817568032CA2C2B400B24577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817568012CA2C2B400B24577 /* Main.storyboard */; };
@@ -16,7 +18,6 @@
 		817568152CA2C33600B24577 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817568132CA2C33600B24577 /* Extension.swift */; };
 		818F56052D40F1EA00DBB9B8 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 818F56042D40F1EA00DBB9B8 /* WWCameraZoomOptionView */; };
 		81CAF7032D40FB2E008799BD /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81CAF7022D40FB2E008799BD /* WWCameraZoomOptionView */; };
-		81CAF7062D40FF34008799BD /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81CAF7052D40FF34008799BD /* WWCameraZoomOptionView */; };
 		81D01BD72D40F1B900478106 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81D01BD62D40F1B900478106 /* WWCameraZoomOptionView */; };
 		81E3F24A2D40A362003516F5 /* WWCameraZoomOptionView in Frameworks */ = {isa = PBXBuildFile; productRef = 81E3F2492D40A362003516F5 /* WWCameraZoomOptionView */; };
 /* End PBXBuildFile section */
@@ -42,7 +43,8 @@
 				818F56052D40F1EA00DBB9B8 /* WWCameraZoomOptionView in Frameworks */,
 				81CAF7032D40FB2E008799BD /* WWCameraZoomOptionView in Frameworks */,
 				81E3F24A2D40A362003516F5 /* WWCameraZoomOptionView in Frameworks */,
-				81CAF7062D40FF34008799BD /* WWCameraZoomOptionView in Frameworks */,
+				64E97DEA2D412C66004A97A4 /* WWCameraZoomOptionView in Frameworks */,
+				64E97DE72D41283A004A97A4 /* WWCameraZoomOptionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +143,8 @@
 				81D01BD62D40F1B900478106 /* WWCameraZoomOptionView */,
 				818F56042D40F1EA00DBB9B8 /* WWCameraZoomOptionView */,
 				81CAF7022D40FB2E008799BD /* WWCameraZoomOptionView */,
-				81CAF7052D40FF34008799BD /* WWCameraZoomOptionView */,
+				64E97DE62D41283A004A97A4 /* WWCameraZoomOptionView */,
+				64E97DE92D412C66004A97A4 /* WWCameraZoomOptionView */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -172,7 +175,7 @@
 			);
 			mainGroup = 817567EF2CA2C2B400B24577;
 			packageReferences = (
-				81CAF7042D40FF34008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */,
+				64E97DE82D412C66004A97A4 /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -355,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240924;
+				CURRENT_PROJECT_VERSION = 20250122;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -364,7 +367,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240924;
+				CURRENT_PROJECT_VERSION = 20250122;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -397,7 +400,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +442,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81CAF7042D40FF34008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */ = {
+		64E97DE82D412C66004A97A4 /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWCameraZoomOptionView";
 			requirement = {
@@ -450,17 +453,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		64E97DE62D41283A004A97A4 /* WWCameraZoomOptionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WWCameraZoomOptionView;
+		};
+		64E97DE92D412C66004A97A4 /* WWCameraZoomOptionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E97DE82D412C66004A97A4 /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */;
+			productName = WWCameraZoomOptionView;
+		};
 		818F56042D40F1EA00DBB9B8 /* WWCameraZoomOptionView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WWCameraZoomOptionView;
 		};
 		81CAF7022D40FB2E008799BD /* WWCameraZoomOptionView */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = WWCameraZoomOptionView;
-		};
-		81CAF7052D40FF34008799BD /* WWCameraZoomOptionView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 81CAF7042D40FF34008799BD /* XCRemoteSwiftPackageReference "WWCameraZoomOptionView" */;
 			productName = WWCameraZoomOptionView;
 		};
 		81D01BD62D40F1B900478106 /* WWCameraZoomOptionView */ = {
