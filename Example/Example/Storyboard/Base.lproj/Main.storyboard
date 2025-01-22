@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nvk-hW-CXA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zoom Scale-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Desktop" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-FY-KaF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqw-QC-U9i">
+                                <rect key="frame" x="87" y="766" width="240" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNL-rd-Fa3" customClass="WWCameraZoomOptionView" customModule="WWCameraZoomOptionView">
+                                        <rect key="frame" x="8" y="8" width="224" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="8oI-CK-dSV"/>
+                                    <constraint firstItem="RNL-rd-Fa3" firstAttribute="centerX" secondItem="oqw-QC-U9i" secondAttribute="centerX" id="9zw-Cz-UJv"/>
+                                    <constraint firstAttribute="width" constant="240" id="Mgb-u6-I1X"/>
+                                    <constraint firstAttribute="trailing" secondItem="RNL-rd-Fa3" secondAttribute="trailing" constant="8" id="N2d-PM-5ni"/>
+                                    <constraint firstItem="RNL-rd-Fa3" firstAttribute="top" secondItem="oqw-QC-U9i" secondAttribute="top" constant="8" id="UqX-23-mQC"/>
+                                    <constraint firstItem="RNL-rd-Fa3" firstAttribute="centerY" secondItem="oqw-QC-U9i" secondAttribute="centerY" id="WZ1-3Y-LoI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="Sfe-FY-KaF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Is4-FV-h3W"/>
+                            <constraint firstItem="Sfe-FY-KaF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c84-lF-kX0"/>
+                            <constraint firstItem="Sfe-FY-KaF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dAG-Lb-vLs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oqw-QC-U9i" secondAttribute="bottom" constant="32" id="k1R-kt-hhe"/>
+                            <constraint firstItem="oqw-QC-U9i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oGv-W4-R0I"/>
+                            <constraint firstAttribute="bottom" secondItem="Sfe-FY-KaF" secondAttribute="bottom" id="x5b-6P-ADg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zoom Scale" id="ASc-YT-plj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up.fill" catalog="system" id="HH3-EK-Z6l">
+                            <connections>
+                                <action selector="selectItem:" destination="BYZ-38-t0r" id="9EB-rE-QRR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="zoomOptionView" destination="RNL-rd-Fa3" id="Ct8-5L-ypy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049.2753623188407" y="-2.0089285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FxA-hc-fVT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nvk-hW-CXA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3XH-xz-86A">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oKz-bV-1Az"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IiD-PU-G8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="-2.0089285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Desktop" width="125.33333587646484" height="271.66665649414062"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
