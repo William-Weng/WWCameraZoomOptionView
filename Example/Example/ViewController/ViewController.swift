@@ -14,16 +14,21 @@ final class ViewController: UIViewController {
     @IBOutlet weak var zoomOptionView: WWCameraZoomOptionView!
     
     private let textArray = ["0.5x", "1.0x", "2.0x", "5.0x"]
-    private var index = 0
-    
+    private let option: WWCameraZoomOptionView.OptionViewInformation = (UIFont.systemFont(ofSize: 20), .red, .yellow.withAlphaComponent(0.7))
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        zoomOptionView.configure(with: self)
+        
+        zoomOptionView.configure(with: self, optionViewInformation: option)
     }
     
     @IBAction func selectItem(_ sender: UIBarButtonItem) {
-        zoomOptionView.selectItem(with: index)
-        index += 1
+        
+        if let index = zoomOptionView.currentSelectedIndex {
+            zoomOptionView.selectItem(with: index + 1)
+        } else {
+            zoomOptionView.selectItem(with: 0)
+        }
     }
 }
 

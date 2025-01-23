@@ -44,6 +44,7 @@ extension CameraZoomOptionView {
         optionLabel.text = text
         optionLabel.font = optionViewInformation.font
         optionLabel.textColor = optionViewInformation.textColor
+        optionImageView.backgroundColor = optionViewInformation.backgroundColor
     }
     
     /// 更新縮放比例 + 動畫

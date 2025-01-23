@@ -1,14 +1,15 @@
 {
+  "originHash" : "a241f92f536eebd5542951e03f566225c80ce449a5daee8de807b63366cdbef2",
   "pins" : [
     {
       "identity" : "wwcamerazoomoptionview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWCameraZoomOptionView",
       "state" : {
-        "revision" : "3325fbd9febfc9ab193afdd2799a4688c1ee21b7",
-        "version" : "1.0.3"
+        "revision" : "f24af6f7e2c6fdd6bfd544bfa96b8e302e220079",
+        "version" : "1.0.4"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

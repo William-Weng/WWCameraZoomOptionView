@@ -14,7 +14,7 @@ open class WWCameraZoomOptionView: UIView {
     
     private let optionStackView = UIStackView()
     private let defaultDuration: TimeInterval = 0.25
-        
+    
     private weak var delegate: WWCameraZoomOptionViewDelegate?
     
     private var optionViewInformation: OptionViewInformation = (font: UIFont.systemFont(ofSize: 12), textColor: .white, backgroundColor: .darkGray.withAlphaComponent(0.5))

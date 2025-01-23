@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nvk-hW-CXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nvk-hW-CXA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,10 +22,20 @@
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqw-QC-U9i">
                                 <rect key="frame" x="87" y="766" width="240" height="64"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNL-rd-Fa3" customClass="WWCameraZoomOptionView" customModule="WWCameraZoomOptionView">
+                                        <rect key="frame" x="8" y="8" width="224" height="48"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.29785802980132453" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="RNL-rd-Fa3" firstAttribute="centerY" secondItem="oqw-QC-U9i" secondAttribute="centerY" id="BjD-Ae-n2g"/>
                                     <constraint firstAttribute="height" constant="64" id="Btp-aJ-VBF"/>
+                                    <constraint firstItem="RNL-rd-Fa3" firstAttribute="centerX" secondItem="oqw-QC-U9i" secondAttribute="centerX" id="T7n-KH-Vox"/>
                                     <constraint firstAttribute="width" constant="240" id="htS-bM-iRV"/>
+                                    <constraint firstItem="RNL-rd-Fa3" firstAttribute="top" secondItem="oqw-QC-U9i" secondAttribute="top" constant="8" id="lGx-Jq-yxV"/>
+                                    <constraint firstAttribute="trailing" secondItem="RNL-rd-Fa3" secondAttribute="trailing" constant="8" id="p8m-Wo-byg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -33,26 +43,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNL-rd-Fa3" customClass="WWCameraZoomOptionView" customModule="WWCameraZoomOptionView">
-                                <rect key="frame" x="95" y="774" width="224" height="48"/>
-                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="224" id="1ed-Vi-89X"/>
-                                    <constraint firstAttribute="height" constant="48" id="4CS-hf-fEI"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oqw-QC-U9i" secondAttribute="bottom" constant="32" id="D1t-o1-gaY"/>
                             <constraint firstAttribute="bottom" secondItem="Sfe-FY-KaF" secondAttribute="bottom" id="FMD-th-rtK"/>
-                            <constraint firstItem="oqw-QC-U9i" firstAttribute="centerX" secondItem="RNL-rd-Fa3" secondAttribute="centerX" id="IgX-w5-yoI"/>
                             <constraint firstItem="oqw-QC-U9i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K3r-br-kiO"/>
                             <constraint firstItem="Sfe-FY-KaF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cll-Wv-DRb"/>
                             <constraint firstItem="Sfe-FY-KaF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lCj-fS-sB4"/>
                             <constraint firstItem="Sfe-FY-KaF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ph0-kH-kqY"/>
-                            <constraint firstItem="oqw-QC-U9i" firstAttribute="centerY" secondItem="RNL-rd-Fa3" secondAttribute="centerY" id="qNv-Nq-gOX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zoom Scale" id="ASc-YT-plj">
@@ -91,7 +91,7 @@
     </scenes>
     <resources>
         <image name="Desktop" width="125.33333587646484" height="271.66665649414062"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
