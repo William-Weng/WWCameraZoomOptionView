@@ -34,4 +34,11 @@ public protocol WWCameraZoomOptionViewDelegate: AnyObject {
     ///   - optionView: WWCameraZoomOptionView
     ///   - index: Int
     func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, didSelected index: Int)
+    
+    /// 項目點擊能不能有反應
+    /// - Parameters:
+    ///   - optionView: WWCameraZoomOptionView
+    ///   - index: Int
+    /// - Returns: Bool
+    func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, canTapIndex index: Int) -> Bool
 }

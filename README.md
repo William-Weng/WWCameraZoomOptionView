@@ -11,7 +11,7 @@
 
 ```bash
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.0.2"))
+    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.0.3"))
 ]
 ```
 
@@ -28,6 +28,7 @@ dependencies: [
 |labelText(with:index:)|項目文字|
 |duration(with:index:)|動畫時間|
 |cameraZoomOptionView(_:didSelected:)|項目被選到哪一個|
+|cameraZoomOptionView(_:canTapIndex:)|項目點擊能不能有反應|
 
 ### Parameters - 參數
 |參數|功能|
@@ -73,6 +74,10 @@ extension ViewController: WWCameraZoomOptionViewDelegate {
     
     func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, didSelected index: Int) {
         print(index)
+    }
+    
+    func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, canTapIndex index: Int) -> Bool {
+        return false
     }
 }
 ```

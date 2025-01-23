@@ -45,4 +45,8 @@ extension ViewController: WWCameraZoomOptionViewDelegate {
     func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, didSelected index: Int) {
         print(index)
     }
+    
+    func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, canTapIndex index: Int) -> Bool {
+        return false
+    }
 }

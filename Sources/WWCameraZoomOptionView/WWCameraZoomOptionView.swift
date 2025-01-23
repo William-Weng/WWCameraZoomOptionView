@@ -31,7 +31,13 @@ open class WWCameraZoomOptionView: UIView {
     /// - Parameter tap: UITapGestureRecognizer
     func haneleTapAction(_ tap: UITapGestureRecognizer) {
         
-        guard let optionView = tap.view as? CameraZoomOptionView else { return }
+        guard let optionView = tap.view as? CameraZoomOptionView,
+              let canTap = delegate?.cameraZoomOptionView(self, canTapIndex: optionView.tag),
+              canTap
+        else {
+            return
+        }
+        
         selectItem(with: optionView.tag)
     }
 }
