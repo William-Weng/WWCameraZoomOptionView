@@ -50,7 +50,6 @@ final class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         zoomOptionView.configure(with: self, optionViewInformation: option)
     }
     
