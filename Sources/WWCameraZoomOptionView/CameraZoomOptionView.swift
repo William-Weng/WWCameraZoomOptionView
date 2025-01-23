@@ -26,7 +26,7 @@ class CameraZoomOptionView: UIView {
     
     open override func draw(_ rect: CGRect) {
         super.draw(rect)
-        cornerRadiusSetting(optionImageView.frame.width * 0.5)
+        cornerRadiusSetting(optionImageView.frame.height * 0.5)
     }
 }
 

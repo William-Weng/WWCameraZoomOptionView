@@ -11,7 +11,7 @@
 
 ```bash
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.0.3"))
+    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.0.4"))
 ]
 ```
 
@@ -19,7 +19,7 @@ dependencies: [
 |函式|功能|
 |-|-|
 |configure(with:optionViewInformation:)|相關設定|
-|selectItem(with:scale:)|選擇選項|
+|selectItem(with:)|選擇選項|
 
 ### [WWCameraZoomOptionViewDelegate](https://ezgif.com/video-to-webp)
 |函式|功能|
@@ -28,7 +28,8 @@ dependencies: [
 |labelText(with:index:)|項目文字|
 |duration(with:index:)|動畫時間|
 |cameraZoomOptionView(_:didSelected:)|項目被選到哪一個|
-|cameraZoomOptionView(_:canTapIndex:)|項目點擊能不能有反應|
+|cameraZoomOptionView(_:canTapWith:)|項目點擊能不能有反應|
+|cameraZoomOptionView(_:scaleWith:)|項目縮放比例|
 
 ### Parameters - 參數
 |參數|功能|
@@ -76,8 +77,12 @@ extension ViewController: WWCameraZoomOptionViewDelegate {
         print(index)
     }
     
-    func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, canTapIndex index: Int) -> Bool {
-        return false
+    func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, canTapWith index: Int) -> Bool {
+        return true
+    }
+    
+    func cameraZoomOptionView(_ optionView: WWCameraZoomOptionView, scaleWith index: Int) -> CGFloat {
+        return 1.2
     }
 }
 ```

@@ -35,7 +35,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNL-rd-Fa3" customClass="WWCameraZoomOptionView" customModule="WWCameraZoomOptionView">
                                 <rect key="frame" x="95" y="774" width="224" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="224" id="1ed-Vi-89X"/>
                                     <constraint firstAttribute="height" constant="48" id="4CS-hf-fEI"/>

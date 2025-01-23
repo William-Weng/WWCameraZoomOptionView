@@ -32,7 +32,7 @@ open class WWCameraZoomOptionView: UIView {
     func haneleTapAction(_ tap: UITapGestureRecognizer) {
         
         guard let optionView = tap.view as? CameraZoomOptionView,
-              let canTap = delegate?.cameraZoomOptionView(self, canTapIndex: optionView.tag),
+              let canTap = delegate?.cameraZoomOptionView(self, canTapWith: optionView.tag),
               canTap
         else {
             return
@@ -67,10 +67,10 @@ public extension WWCameraZoomOptionView {
     /// 選擇選項
     /// - Parameters:
     ///   - index: 序號
-    ///   - scale: 縮放比例
-    func selectItem(with index: Int, scale: CGFloat = 1.2) {
+    func selectItem(with index: Int) {
         
         let count = optionStackView.subviews.count
+        let scale = delegate?.cameraZoomOptionView(self, scaleWith: index) ?? 1.2
         
         optionStackView.arrangedSubviews.forEach { subView in
             
