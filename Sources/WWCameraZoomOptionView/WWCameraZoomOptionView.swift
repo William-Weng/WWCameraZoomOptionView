@@ -87,6 +87,22 @@ public extension WWCameraZoomOptionView {
             delegate?.cameraZoomOptionView(self, didSelected: index)
         }
     }
+    
+    /// 全選項文字設定
+    /// - Parameter texts: [String]
+    func optionTextsSetting(with texts: [String]) {
+        
+        for (index, subview) in optionStackView.arrangedSubviews.enumerated() {
+            
+            guard let text = texts[safe: index],
+                  let optionView = subview as? CameraZoomOptionView
+            else {
+                return
+            }
+            
+            optionView.labelText(text)
+        }
+    }
 }
 
 // MARK: - 小工具

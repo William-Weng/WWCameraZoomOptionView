@@ -32,7 +32,7 @@ class CameraZoomOptionView: UIView {
 
 // MARK: - 公開工具
 extension CameraZoomOptionView {
-    
+        
     /// 相關外型設定
     /// - Parameters:
     ///   - tag: UInt
@@ -65,6 +65,12 @@ extension CameraZoomOptionView {
     ///   - scale: 縮放比例
     func updateGapTransform(_ scale: CGFloat) {
         contentView.transform = CGAffineTransform(scaleX: scale, y: scale)
+    }
+    
+    /// 設定文字內容
+    /// - Parameter text: String?
+    func labelText(_ text: String?) {
+        optionLabel.text = text
     }
 }
 

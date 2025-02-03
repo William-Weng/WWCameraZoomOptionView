@@ -1,5 +1,4 @@
 {
-  "originHash" : "a241f92f536eebd5542951e03f566225c80ce449a5daee8de807b63366cdbef2",
   "pins" : [
     {
       "identity" : "wwcamerazoomoptionview",
@@ -11,5 +10,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
