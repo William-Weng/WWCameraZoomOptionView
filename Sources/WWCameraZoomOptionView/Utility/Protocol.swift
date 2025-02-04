@@ -20,7 +20,7 @@ public protocol WWCameraZoomOptionViewDelegate: AnyObject {
     ///   - optionView: WWCameraZoomOptionView
     ///   - index: Int
     /// - Returns: String
-    func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String
+    func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String?
     
     /// 動畫時間
     /// - Parameters:

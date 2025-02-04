@@ -11,7 +11,7 @@
 
 ```bash
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.1.1"))
 ]
 ```
 
@@ -46,7 +46,7 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var zoomOptionView: WWCameraZoomOptionView!
     
-    private let textArray = ["0.5x", "1.0x", "2.0x", "5.0x"]
+    private let textArray = [".5", "1", "2", "5"]
     private let option: WWCameraZoomOptionView.OptionViewInformation = (UIFont.systemFont(ofSize: 20), .red, .yellow.withAlphaComponent(0.7))
         
     override func viewDidLoad() {
@@ -64,14 +64,13 @@ final class ViewController: UIViewController {
     }
 }
 
-// MARK: - WWCameraZoomOptionViewDelegate
 extension ViewController: WWCameraZoomOptionViewDelegate {
     
     func itemCount(with optionView: WWCameraZoomOptionView) -> Int {
         return textArray.count
     }
     
-    func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String {
+    func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String? {
         return textArray[index]
     }
     

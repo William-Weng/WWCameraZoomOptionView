@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var zoomOptionView: WWCameraZoomOptionView!
     
-    private let textArray = ["0.5", "1", "2", "5"]
+    private let textArray = [".5", "1", "2", "5"]
     private let option: WWCameraZoomOptionView.OptionViewInformation = (UIFont.systemFont(ofSize: 20), .red, .yellow.withAlphaComponent(0.7))
         
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ extension ViewController: WWCameraZoomOptionViewDelegate {
         return textArray.count
     }
     
-    func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String {
+    func labelText(with optionView: WWCameraZoomOptionView, index: Int) -> String? {
         return textArray[index]
     }
     

@@ -90,19 +90,17 @@ public extension WWCameraZoomOptionView {
     
     /// 被選到的文字設定
     /// - Parameters:
-    ///   - labelText: String
+    ///   - labelText: String?
     ///   - index: Int
-    func optionLabelText(_ labelText: String, withIndex index: Int) {
+    func optionLabelText(_ labelText: String?, withIndex index: Int) {
         
         for (index, subview) in optionStackView.arrangedSubviews.enumerated() {
             
-            guard let text = delegate?.labelText(with: self, index: index),
-                  let optionView = subview as? CameraZoomOptionView
-            else {
-                return
-            }
+            guard let optionView = subview as? CameraZoomOptionView else { return }
 
+            let text = delegate?.labelText(with: self, index: index)
             optionView.labelText(text)
+            
             if (currentSelectedIndex == index) { optionView.labelText(labelText) }
         }
     }
