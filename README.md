@@ -11,7 +11,7 @@
 
 ```bash
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.1.1"))
+    .package(url: "https://github.com/William-Weng/WWCameraZoomOptionView.git", .upToNextMajor(from: "1.1.2"))
 ]
 ```
 
@@ -19,7 +19,7 @@ dependencies: [
 |函式|功能|
 |-|-|
 |configure(with:optionViewInformation:)|相關設定|
-|selectItem(with:)|選擇選項|
+|selectItem(with:completion:)|選擇選項|
 |optionLabelText(_:withIndex:)|被選到的文字設定|
 
 ### [WWCameraZoomOptionViewDelegate](https://ezgif.com/video-to-webp)

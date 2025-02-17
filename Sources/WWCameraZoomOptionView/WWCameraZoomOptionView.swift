@@ -38,7 +38,10 @@ open class WWCameraZoomOptionView: UIView {
             return
         }
         
-        selectItem(with: optionView.tag)
+        selectItem(with: optionView.tag) { [unowned self] index in
+            guard let index = index else { return }
+            delegate?.cameraZoomOptionView(self, didSelected: index)
+        }
     }
 }
 
@@ -67,7 +70,8 @@ public extension WWCameraZoomOptionView {
     /// 選擇選項
     /// - Parameters:
     ///   - index: 序號
-    func selectItem(with index: Int) {
+    ///   - completion: 完成後的動作
+    func selectItem(with index: Int, completion: ((Int?) -> Void)? = nil) {
         
         let count = optionStackView.subviews.count
         let scale = delegate?.cameraZoomOptionView(self, scaleWith: index) ?? 1.2
@@ -82,10 +86,8 @@ public extension WWCameraZoomOptionView {
         
         currentSelectedIndex = nil
         
-        if count != 0, count > index {
-            currentSelectedIndex = index
-            delegate?.cameraZoomOptionView(self, didSelected: index)
-        }
+        if count != 0, count > index { currentSelectedIndex = index }
+        completion?(currentSelectedIndex)
     }
     
     /// 被選到的文字設定
